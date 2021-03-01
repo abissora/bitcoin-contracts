@@ -195,7 +195,7 @@ const owner = "0x5A3aFb73b1DcEEBE6153C204d2Ef562168bAc65c"
 const contract = new web3.eth.Contract(abi, address)
 
 const getSymbol = async() => {
-    let symbol = await contract.methods.symbol.call()
+    let symbol = await contract.methods.symbol().call()
     return 'symbol is: ' + symbol
 }
 
